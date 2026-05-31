@@ -1,0 +1,28 @@
+node_modules/
+dist/
+release/
+coverage/
+*.log
+*.sqlite
+*.sqlite.tmp
+*.part
+*.zip
+.vite/
+.next/
+
+# secrets & local env
+.env
+.env.*
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# build caches
+*.tsbuildinfo
+.turbo/
+out/
+
+.vercel

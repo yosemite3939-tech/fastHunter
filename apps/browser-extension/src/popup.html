@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastHunter Downloader</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="term">
+      <header class="bar">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="logo"><b>fast</b><span class="sl">\</span>Hunter<span class="ac">.</span></span>
+        <span id="conn" class="conn">[..]</span>
+      </header>
+      <p class="path">root@fasthunter:~$ <span class="blink">&#9608;</span></p>
+
+      <section class="card">
+        <p class="lbl"># current_page</p>
+        <div id="page-url" class="url">loading&hellip;</div>
+        <button id="send" class="btn">[ send &#9166; ]</button>
+      </section>
+
+      <section class="card">
+        <p class="lbl"># paste_url</p>
+        <input id="manual" class="inp" type="text" placeholder="https://example.com/file.zip" spellcheck="false" />
+        <button id="send-manual" class="btn">[ fetch &#9166; ]</button>
+      </section>
+
+      <div id="row-auto" class="row">
+        <span class="row-txt"><b># auto_capture</b><small>route browser downloads to FastHunter</small></span>
+        <span id="auto" class="tog">[ ]</span>
+      </div>
+
+      <footer id="status" class="foot"># checking desktop link&hellip;</footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

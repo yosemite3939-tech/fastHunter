@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/jetbrains-mono-800.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+:root { --bg:#0a0a0a; --panel:#121212; --text:#ededed; --dim:#7c7c7c; --line:#2a2a2a; --ac:#ff8a3d; }
+@media (prefers-color-scheme: light) { :root { --bg:#f3f3f3; --panel:#ffffff; --text:#141414; --dim:#6b6b6b; --line:#dcdcdc; } }
+* { box-sizing: border-box; }
+body { width: 320px; margin: 0; background: var(--bg); color: var(--text); font-family: "JetBrains Mono", "Cascadia Mono", "Cascadia Code", Consolas, ui-monospace, monospace; font-size: 12px; }
+.term { padding: 12px; }
+.bar { display: flex; align-items: center; gap: 8px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
+.dots { display: flex; gap: 4px; }
+.dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--line); }
+.dots i:first-child { background: var(--ac); }
+.logo { font-weight: 800; letter-spacing: .5px; }
+.logo .sl { color: var(--dim); }
+.logo .ac { color: var(--ac); }
+.conn { margin-left: auto; color: var(--dim); font-weight: 800; }
+.conn.ready { color: var(--ac); }
+.path { margin: 10px 0; color: var(--dim); }
+.blink { animation: bl 1s steps(1) infinite; }
+@keyframes bl { 50% { opacity: 0; } }
+.card { margin: 8px 0; padding: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.lbl { margin: 0 0 7px; color: var(--dim); font-size: 10px; letter-spacing: .5px; }
+.url { overflow: hidden; margin-bottom: 9px; color: var(--text); text-overflow: ellipsis; white-space: nowrap; }
+.inp { width: 100%; margin-bottom: 9px; padding: 7px; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 6px; font: inherit; }
+.inp:focus { outline: none; border-color: var(--ac); }
+.btn { width: 100%; padding: 8px; background: transparent; color: var(--ac); border: 1px solid var(--ac); border-radius: 6px; font: inherit; font-weight: 800; cursor: pointer; transition: .12s; }
+.btn:hover { background: var(--ac); color: var(--bg); }
+.row { display: flex; align-items: center; gap: 8px; margin: 8px 0; padding: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+.row-txt { flex: 1; }
+.row b { display: block; font-size: 11px; }
+.row small { display: block; margin-top: 3px; color: var(--dim); font-size: 9px; }
+.tog { color: var(--dim); font-weight: 800; }
+.tog.on { color: var(--ac); }
+.foot { padding-top: 10px; color: var(--dim); font-size: 10px; border-top: 1px dashed var(--line); word-break: break-word; }

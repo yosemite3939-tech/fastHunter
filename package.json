@@ -1,0 +1,30 @@
+{
+  "name": "fasthunter-downloader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A polished Windows download manager with segmented HTTP downloads and browser capture.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @fasthunter/desktop",
+    "dev:web": "npm run dev --workspace @fasthunter/web",
+    "build": "npm run build --workspace @fasthunter/download-engine && npm run build --workspace @fasthunter/desktop && npm run build --workspace @fasthunter/browser-extension",
+    "build:web": "npm run build --workspace @fasthunter/web",
+    "build:desktop": "npm run build --workspace @fasthunter/desktop",
+    "build:extension": "npm run build --workspace @fasthunter/browser-extension",
+    "build:native-host": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-native-host.ps1",
+    "package:windows": "npm run icons && npm run build:native-host && npm run build --workspace @fasthunter/download-engine && npm run package:windows --workspace @fasthunter/desktop",
+    "icons": "node scripts/generate-icons.mjs",
+    "lint": "npm run typecheck --workspaces --if-present",
+    "lint:web": "npm run lint --workspace @fasthunter/web",
+    "test": "npm run test --workspace @fasthunter/download-engine",
+    "zip:extension": "node scripts/zip-extension.mjs"
+  },
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.34.2"
+  }
+}
