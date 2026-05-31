@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/media/wordmark.png" alt="fast\HUNTER." width="460" />
+  <img src="docs/media/logo-black.png" alt="fast\HUNTER." width="520" />
 </p>
 
 <p align="center"><b>Hunt your downloads down.</b> ⚡</p>
@@ -96,3 +96,7 @@ root@fasthunter:~$ npm run zip:extension       # store zip -> release/
 ## ⌁ License
 
 [MIT](LICENSE) — use it, fork it, ship it. Just keep the copyright.
+
+<p align="center">
+  <img src="docs/media/logo-white.png" alt="fast\HUNTER." width="200" />
+</p>
