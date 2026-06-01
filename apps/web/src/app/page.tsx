@@ -16,6 +16,7 @@ import { MotionReveal } from "@/components/motion-reveal";
 import { PixelBat } from "@/components/pixel-bat";
 import { ProductPreview } from "@/components/product/product-preview";
 import { HeroSignalField } from "@/components/product/hero-signal-field";
+import { HomeMotionField } from "@/components/product/home-motion-field";
 import { ScreenshotFrame } from "@/components/product/screenshot-frame";
 import { VideoFrame } from "@/components/product/video-frame";
 import { BrandMark, ButtonLink, SectionLabel, TerminalLine } from "@/components/ui";
@@ -25,7 +26,8 @@ const icons = [Rocket, CirclePause, ListChecks, Activity, RefreshCcw, SlidersHor
 
 export default function HomePage() {
   return (
-    <>
+    <div className="home-motion-shell">
+      <HomeMotionField />
       <section className="home-hero wrap">
         <PixelBat />
         <HeroSignalField />
@@ -57,13 +59,13 @@ export default function HomePage() {
       </section>
 
       <section id="screenshots" className="content-section wrap">
-        <div className="section-heading">
+        <MotionReveal className="section-heading">
           <SectionLabel index="01">Product interface</SectionLabel>
           <div>
             <h2>Built around clarity.</h2>
             <p>Every status is visible. Every action stays close. Nothing gets between the file and the finish line.</p>
           </div>
-        </div>
+        </MotionReveal>
         <div className="screenshots-stack">
           {SCREENSHOTS.map((screenshot, index) => (
             <MotionReveal key={screenshot.src} delay={index * 0.08}>
@@ -79,10 +81,10 @@ export default function HomePage() {
 
       <section className="content-section">
         <div className="wrap">
-          <div className="section-heading">
+          <MotionReveal className="section-heading">
             <SectionLabel index="02">Capability list</SectionLabel>
             <div><h2>Only what earns its place.</h2><p>No crowded controls. No buried state. Just a focused transfer tool.</p></div>
-          </div>
+          </MotionReveal>
           <div className="grid-4">
             {FEATURES.map(([title, body], index) => {
               const Icon = icons[index];
@@ -93,43 +95,43 @@ export default function HomePage() {
       </section>
 
       <section className="content-section wrap workflow-section">
-        <div className="section-heading">
+        <MotionReveal className="section-heading">
           <SectionLabel index="03">Workflow</SectionLabel>
           <div><h2>Three steps.<br />No circus.</h2><p>Paste the source. Fetch the file. Stay in control until the transfer completes.</p></div>
-        </div>
-        <div className="workflow-grid">
+        </MotionReveal>
+        <MotionReveal className="workflow-grid">
           {[["001", "Paste URL", "Point fast\\Hunter. at a direct HTTP or HTTPS file."], ["002", "Fetch download", "Start a clean transfer with visible speed and status."], ["003", "Pause. Resume. Complete.", "Control the queue without fighting the interface."]].map(([number, title, body]) => (
             <article key={number}>
               <span>{number}</span><h3>{title}</h3><p>{body}</p>
             </article>
           ))}
-        </div>
-        <div className="workflow-terminal">
+        </MotionReveal>
+        <MotionReveal className="workflow-terminal" delay={0.1}>
           <TerminalLine command="fetch" text="https://releases.example.com/archive-x64.zip" />
           <TerminalLine command="run" text=":: segmented transfer active [08 threads]" />
           <TerminalLine text=":: archive-x64.zip completed in 00:42" dim />
-        </div>
+        </MotionReveal>
       </section>
 
       <section className="philosophy">
-        <div className="wrap philosophy-grid">
+        <MotionReveal className="wrap philosophy-grid" distance={42}>
           <SectionLabel index="04">Manifesto</SectionLabel>
           <div>
             <h2>Software should not fight the user.</h2>
             <p>Most download managers feel old, bloated, or visually messy. fast\Hunter. is built to feel fast, readable, and under your control.</p>
             <Link href="/about">Read the manifesto <ArrowRight size={16} /></Link>
           </div>
-        </div>
+        </MotionReveal>
       </section>
 
-      <section className="final-cta wrap">
+      <MotionReveal className="final-cta wrap" distance={44}>
         <SectionLabel index="05">Get the build</SectionLabel>
         <h2>Ready to<br />download?</h2>
         <div className="hero-actions">
           <ButtonLink href={DOWNLOADS.installer} download>Download for Windows</ButtonLink>
           <ButtonLink href="/changelog" variant="secondary">Read Changelog</ButtonLink>
         </div>
-      </section>
-    </>
+      </MotionReveal>
+    </div>
   );
 }

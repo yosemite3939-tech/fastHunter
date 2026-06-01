@@ -3,6 +3,12 @@ export const DOWNLOADS = {
   extension: "/downloads/fasthunter-browser-extension.zip",
 };
 
+export const SUPPORT_LINKS = {
+  github: "https://github.com/Yosemite39/fastHunter",
+  kofi: "https://ko-fi.com/yosemite39",
+  trakteer: "https://trakteer.id/Yosemite39",
+};
+
 export const PRODUCT = {
   name: "fast\\Hunter.",
   version: "v1.0.0",

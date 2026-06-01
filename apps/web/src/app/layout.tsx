@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { SiteEntryIntro } from "@/components/layout/site-entry-intro";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fasthunter.site"),
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <SiteEntryIntro />
         <a className="skip-link" href="#main">Skip to content</a>
         <Header />
         <main id="main">{children}</main>

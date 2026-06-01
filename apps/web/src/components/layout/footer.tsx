@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/ui";
-import { NAV_LINKS, PRODUCT } from "@/data/product";
+import { NAV_LINKS, PRODUCT, SUPPORT_LINKS } from "@/data/product";
 
 export function Footer() {
   return (
@@ -20,7 +20,9 @@ export function Footer() {
         <div>
           <p className="footer-title">Elsewhere</p>
           <div className="footer-links">
-            <a href="https://github.com/Yosemite39/fastHunter" target="_blank" rel="noreferrer">GitHub</a>
+            <a href={SUPPORT_LINKS.github} target="_blank" rel="noreferrer">GitHub</a>
+            <a href={SUPPORT_LINKS.kofi} target="_blank" rel="noreferrer">Ko-fi</a>
+            <a href={SUPPORT_LINKS.trakteer} target="_blank" rel="noreferrer">Trakteer</a>
             <Link href="/support">Support</Link>
           </div>
         </div>
