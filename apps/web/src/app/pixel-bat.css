@@ -28,12 +28,32 @@
   72% { translate: 88px 72px; }
 }
 
+@keyframes pixel-bat-flight-mobile {
+  0%, 100% { translate: 0 8px; }
+  22% { translate: 24px 0; }
+  48% { translate: 48px 10px; }
+  72% { translate: 22px 18px; }
+}
+
 @media (max-width: 1040px) {
   .pixel-bat-container { top: 30px; right: 12px; opacity: .82; }
 }
 
 @media (max-width: 760px) {
-  .pixel-bat-container { display: none; }
+  .pixel-bat-container {
+    top: 58px;
+    right: 0;
+    width: 122px;
+    height: 78px;
+    opacity: .86;
+  }
+
+  .pixel-bat {
+    top: 2px;
+    left: 0;
+    transform: scale(.9);
+    animation: pixel-bat-frames .4s steps(1) infinite, pixel-bat-flight-mobile 7s ease-in-out infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

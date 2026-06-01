@@ -40,10 +40,10 @@ button { cursor: pointer; }
 .brand-dot { font-family: var(--sans); font-weight: 900; }
 
 /* main hero brand */
-.home-hero .brand-mark .brand-slash { color: #eb5620; font-size: 220px; line-height: 0.6em; letter-spacing: -0.063em; }
+.home-hero-copy .brand-mark .brand-slash { color: #eb5620; font-size: 1.27em; line-height: .6em; letter-spacing: -.063em; }
 .home-hero .brand-mark .brand-hunter { letter-spacing: -0.005em; }
 .home-hero .product-preview .brand-hunter { letter-spacing: 0.034em; }
-.home-hero .product-preview .brand-slash { font-size: 79px; }
+.home-hero .product-preview .brand-slash { font-size: 1.2em; }
 
 /* compact header brand */
 .brand-mark-compact { font-size: 25px; }
