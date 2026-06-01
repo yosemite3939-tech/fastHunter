@@ -63,6 +63,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section id="command-loop" className="kinetic-interlude" aria-label="Fast Hunter command loop">
+        <div className="kinetic-line kinetic-line-primary">
+          <span>PASTE / FETCH / RUN / CONTROL /</span>
+          <span aria-hidden="true">PASTE / FETCH / RUN / CONTROL /</span>
+        </div>
+        <div className="kinetic-line kinetic-line-secondary">
+          <span>QUEUE :: RETRY :: RESUME :: COMPLETE ::</span>
+          <span aria-hidden="true">QUEUE :: RETRY :: RESUME :: COMPLETE ::</span>
+        </div>
+        <div className="kinetic-orbit" aria-hidden="true">
+          <i />
+          <span>08 THREADS</span>
+        </div>
+      </section>
+
       <ScrollScene distance={54}>
       <section id="screenshots" className="content-section wrap">
         <MotionReveal className="section-heading">
