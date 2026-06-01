@@ -61,6 +61,7 @@ button { cursor: pointer; }
 .header-product { color: var(--muted); }
 .desktop-nav { display: flex; margin-left: auto; color: var(--muted); }
 .desktop-nav a { padding: 8px 8px; transition: color .2s ease; }
+.desktop-nav a:nth-of-type(2) { color: #dc5000; }
 .desktop-nav a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 5px; }
 .header-end { display: flex; align-items: center; gap: 13px; }
 .system-status { display: flex; align-items: center; gap: 7px; color: var(--muted); white-space: nowrap; }
@@ -295,6 +296,8 @@ button { cursor: pointer; }
 .preview-throughput { color: var(--muted); }
 .preview-bars { display: flex; height: 62px; align-items: end; gap: 4px; margin-top: 8px; }
 .preview-bars i { flex: 1; background: #dedede; opacity: .72; animation: pulse-bar 2s ease-in-out infinite alternate; }
+.preview-bars i:nth-of-type(13) { color: #ce4c0b; }
+.preview-bars i:nth-of-type(14) { color: #992800; }
 .preview-queue { display: grid; gap: 10px; color: var(--muted); }
 .queue-line { display: grid; grid-template-columns: 116px minmax(30px, 1fr) 34px 86px; align-items: center; gap: 8px; color: var(--muted); }
 .queue-line b { overflow: hidden; color: var(--ink); text-overflow: ellipsis; }

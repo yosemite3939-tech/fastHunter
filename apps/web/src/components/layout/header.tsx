@@ -9,7 +9,7 @@ export function Header() {
       <div className="header-inner wrap">
         <Link href="/" className="header-brand" aria-label="fast Hunter home">
           <BrandMark compact />
-          <span className="header-product">{"// downloader"}</span>
+          <span className="header-product">{"// downloader // by Yosemite39 [ Fianxcandra ]"}</span>
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
           {NAV_LINKS.map((item) => (
