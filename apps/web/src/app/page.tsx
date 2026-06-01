@@ -15,6 +15,8 @@ import {
 import { MotionReveal } from "@/components/motion-reveal";
 import { PixelBat } from "@/components/pixel-bat";
 import { PixelRocket } from "@/components/pixel-rocket";
+import { ScrollProgressRail } from "@/components/scroll-progress-rail";
+import { ScrollScene } from "@/components/scroll-scene";
 import { ProductPreview } from "@/components/product/product-preview";
 import { HeroSignalField } from "@/components/product/hero-signal-field";
 import { HomeMotionField } from "@/components/product/home-motion-field";
@@ -29,6 +31,7 @@ export default function HomePage() {
   return (
     <div className="home-motion-shell">
       <HomeMotionField />
+      <ScrollProgressRail />
       <section className="home-hero wrap">
         <PixelBat />
         <HeroSignalField />
@@ -60,6 +63,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ScrollScene distance={54}>
       <section id="screenshots" className="content-section wrap">
         <MotionReveal className="section-heading">
           <SectionLabel index="01">Product interface</SectionLabel>
@@ -70,17 +74,19 @@ export default function HomePage() {
         </MotionReveal>
         <div className="screenshots-stack">
           {SCREENSHOTS.map((screenshot, index) => (
-            <MotionReveal key={screenshot.src} delay={index * 0.08}>
+            <ScrollScene key={screenshot.src} axis="x" distance={index % 2 === 0 ? 42 : -42}>
               {screenshot.isVideo ? (
                 <VideoFrame src={screenshot.src} title={screenshot.title} caption={screenshot.caption} />
               ) : (
                 <ScreenshotFrame {...screenshot} priority={index === 0} />
               )}
-            </MotionReveal>
+            </ScrollScene>
           ))}
         </div>
       </section>
+      </ScrollScene>
 
+      <ScrollScene distance={58}>
       <section className="content-section">
         <div className="wrap">
           <MotionReveal className="section-heading">
@@ -95,7 +101,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </ScrollScene>
 
+      <ScrollScene distance={62}>
       <section className="content-section wrap workflow-section">
         <MotionReveal className="section-heading">
           <SectionLabel index="03">Workflow</SectionLabel>
@@ -114,7 +122,9 @@ export default function HomePage() {
           <TerminalLine text=":: archive-x64.zip completed in 00:42" dim />
         </MotionReveal>
       </section>
+      </ScrollScene>
 
+      <ScrollScene distance={66}>
       <section className="philosophy">
         <MotionReveal className="wrap philosophy-grid" distance={42}>
           <SectionLabel index="04">Manifesto</SectionLabel>
@@ -125,7 +135,9 @@ export default function HomePage() {
           </div>
         </MotionReveal>
       </section>
+      </ScrollScene>
 
+      <ScrollScene distance={72}>
       <MotionReveal className="final-cta wrap" distance={44}>
         <SectionLabel index="05">Get the build</SectionLabel>
         <h2>Ready to<br />download?</h2>
@@ -134,6 +146,7 @@ export default function HomePage() {
           <ButtonLink href="/changelog" variant="secondary">Read Changelog</ButtonLink>
         </div>
       </MotionReveal>
+      </ScrollScene>
     </div>
   );
 }

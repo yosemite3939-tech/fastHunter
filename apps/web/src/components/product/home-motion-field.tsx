@@ -1,14 +1,15 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
 
 export function HomeMotionField() {
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll();
-  const driftA = useTransform(scrollYProgress, [0, 1], [-40, 170]);
-  const driftB = useTransform(scrollYProgress, [0, 1], [80, -120]);
-  const driftC = useTransform(scrollYProgress, [0, 1], [-70, 130]);
-  const driftD = useTransform(scrollYProgress, [0, 1], [55, -90]);
+  const smoothProgress = useSpring(scrollYProgress, { stiffness: 88, damping: 26, mass: 0.2 });
+  const driftA = useTransform(smoothProgress, [0, 1], [-40, 170]);
+  const driftB = useTransform(smoothProgress, [0, 1], [80, -120]);
+  const driftC = useTransform(smoothProgress, [0, 1], [-70, 130]);
+  const driftD = useTransform(smoothProgress, [0, 1], [55, -90]);
 
   return (
     <div className="scroll-motion-field" aria-hidden="true">
