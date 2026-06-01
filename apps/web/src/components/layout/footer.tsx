@@ -20,8 +20,7 @@ export function Footer() {
         <div>
           <p className="footer-title">Elsewhere</p>
           <div className="footer-links">
-            <a href="#" aria-label="GitHub placeholder">GitHub</a>
-            <a href="https://buymeacoffee.com/yourusername" target="_blank" rel="noreferrer">Buy Me a Coffee</a>
+            <a href="https://github.com/Yosemite39/fastHunter" target="_blank" rel="noreferrer">GitHub</a>
             <Link href="/support">Support</Link>
           </div>
         </div>

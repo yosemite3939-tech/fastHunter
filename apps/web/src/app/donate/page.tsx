@@ -10,11 +10,18 @@ const impact = [
   [Palette, "UI improvements"],
 ] as const;
 
+const supportModes = [
+  ["Coffee", "A small nod to the next focused build."],
+  ["Development", "Support the hours behind the desktop app."],
+  ["Future features", "Back the roadmap without adding noise."],
+  ["Custom amount", "Send the amount that feels right."],
+];
+
 export default function DonatePage() {
   return (
     <>
       <PageHero eyebrow="Optional support" title="Support fast\\Hunter." description="Help keep the project clean, free, and independent. No pressure. The official build stays available either way.">
-        <ButtonLink href="https://buymeacoffee.com/yourusername" external>Donate via Buy Me a Coffee</ButtonLink>
+        <ButtonLink href="/support" variant="secondary">Support channel opening soon</ButtonLink>
       </PageHero>
       <section className="content-section wrap">
         <div className="section-heading"><SectionLabel index="01">Why support</SectionLabel><div><h2>Fund the work, not the clutter.</h2><p>Support lets an independent tool stay focused on careful engineering, clean interfaces, and useful improvements.</p></div></div>
@@ -23,7 +30,7 @@ export default function DonatePage() {
       <section className="content-section wrap">
         <div className="section-heading"><SectionLabel index="02">Support modes</SectionLabel><div><h2>Choose your signal.</h2></div></div>
         <div className="donate-grid">
-          {[["Coffee", "A small nod to the next focused build."], ["Development", "Support the hours behind the desktop app."], ["Future features", "Back the roadmap without adding noise."], ["Custom amount", "Send the amount that feels right."]].map(([title, body], index) => <article key={title}><span>00{index + 1}</span><Coffee size={19} /><h3>{title}</h3><p>{body}</p><a href="https://buymeacoffee.com/yourusername" target="_blank" rel="noreferrer">select support →</a></article>)}
+          {supportModes.map(([title, body], index) => <article key={title}><span>00{index + 1}</span><Coffee size={19} /><h3>{title}</h3><p>{body}</p><em>channel pending</em></article>)}
         </div>
       </section>
       <section className="donate-note wrap"><HeartHandshake size={22} /><p>Donations are optional. Downloading fast\Hunter. does not require an account, subscription, or payment.</p></section>

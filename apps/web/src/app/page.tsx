@@ -15,6 +15,7 @@ import {
 import { MotionReveal } from "@/components/motion-reveal";
 import { PixelBat } from "@/components/pixel-bat";
 import { ProductPreview } from "@/components/product/product-preview";
+import { HeroSignalField } from "@/components/product/hero-signal-field";
 import { ScreenshotFrame } from "@/components/product/screenshot-frame";
 import { VideoFrame } from "@/components/product/video-frame";
 import { BrandMark, ButtonLink, SectionLabel, TerminalLine } from "@/components/ui";
@@ -27,6 +28,7 @@ export default function HomePage() {
     <>
       <section className="home-hero wrap">
         <PixelBat />
+        <HeroSignalField />
         <div className="home-hero-copy">
           <SectionLabel index="00">Download Manager</SectionLabel>
           <h1><BrandMark /></h1>
@@ -42,9 +44,9 @@ export default function HomePage() {
             {[PRODUCT.version, "Windows x64", "Free", "Stable", "Updated May 31"].map((item) => <span key={item}>{item}</span>)}
           </div>
         </div>
-        <MotionReveal className="home-preview">
+        <div className="home-preview hero-preview-boot">
           <ProductPreview />
-        </MotionReveal>
+        </div>
       </section>
 
       <section className="ticker">

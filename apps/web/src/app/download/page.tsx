@@ -1,5 +1,6 @@
-import { Check, Clipboard, FileCheck2, Puzzle } from "lucide-react";
+import { Check, FileCheck2, Puzzle } from "lucide-react";
 import { DownloadCard } from "@/components/product/download-card";
+import { ChecksumCopy } from "@/components/product/checksum-copy";
 import { ButtonLink, PageHero, SectionLabel, StatusBadge, TerminalLine } from "@/components/ui";
 import { DOWNLOADS, PRODUCT } from "@/data/product";
 
@@ -28,7 +29,7 @@ export default function DownloadPage() {
         <div className="checksum">
           <div><FileCheck2 size={18} /><span>SHA256 // FastHunter-Downloader-1.0.0.exe</span></div>
           <code>{PRODUCT.sha256}</code>
-          <button type="button" title="Copy checksum placeholder"><Clipboard size={15} /> copy</button>
+          <ChecksumCopy value={PRODUCT.sha256} />
         </div>
       </section>
       <section className="content-section wrap">
