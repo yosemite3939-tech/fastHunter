@@ -33,11 +33,13 @@ button { cursor: pointer; }
 
 /* brand */
 .brand-mark { display: inline-flex; align-items: baseline; color: var(--ink); line-height: .82; white-space: nowrap; }
-.brand-fast { font-family: "Pirata One", serif; font-size: 1.18em; letter-spacing: -.06em; }
-.brand-slash { display: inline-block; margin-inline: .04em -.02em; font-family: Arial, sans-serif; font-weight: 900; transform: skew(-16deg); }
-.brand-hunter { font-family: "Black Mustang", Impact, sans-serif; letter-spacing: -.04em; }
+.brand-fast { font-family: "Pirata One", serif; font-size: 1.18em; letter-spacing: -.06em; opacity: 1; border-radius: 0px; box-shadow: none; }
+.brand-slash { display: inline-block; margin-inline: .04em -.02em; font-family: Arial, sans-serif; font-weight: 900; transform: skew(-16deg); color: #eb5620; font-size: 220px; line-height: 0.6em; letter-spacing: -0.063em; }
+.brand-hunter { font-family: "Black Mustang", Impact, sans-serif; letter-spacing: -0.005em; }
 .brand-dot { font-family: var(--sans); font-weight: 900; }
 .brand-mark-compact { font-size: 25px; }
+.brand-mark-compact .brand-slash { color: #d13700; font-size: 30px; }
+.brand-mark-compact .brand-hunter { letter-spacing: 0.043em; line-height: 2; }
 
 /* header */
 .site-header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid var(--line); background: rgba(5,5,5,.88); backdrop-filter: blur(18px); }
