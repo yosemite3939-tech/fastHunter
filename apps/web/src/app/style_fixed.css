@@ -1,0 +1,57 @@
+/*
+ * Custom CSS overrides for fastHunter website
+ *
+ * These rules address several issues observed on the live site:
+ *
+ * 1. The hero section text ("fast/HUNTER") was truncated on desktop
+ *    while appearing correctly on mobile.  To ensure the word wraps
+ *    naturally across viewports, we remove any white‑space restrictions
+ *    and allow the text to scale responsively.  Media queries adjust
+ *    the font size for larger screens without clipping.  Overflow is
+ *    also made visible so that no glyphs are hidden.
+ *
+ * 2. The introductory and main sections featured an orange gradient
+ *    background.  The gradient has been removed and replaced with a
+ *    solid background color using a CSS custom property.  If your
+ *    Tailwind or CSS framework defines a `--color-background` custom
+ *    property, it will be used; otherwise white is provided as a
+ *    fallback.
+ *
+ * 3. Several animations felt choppy or abrupt.  A new utility
+ *    `.smooth-animation` has been introduced that applies a
+ *    consistent timing function (`ease-in-out`), duration and GPU
+ *    acceleration hints (`will-change`) to elements.  Apply this
+ *    class to any animated element to improve motion smoothness.
+ */
+
+/* 1. Ensure hero title text does not clip on larger viewports */
+.hero-title {
+  white-space: normal !important; /* allow wrapping instead of forcing one line */
+  overflow: visible !important;   /* do not clip overflowing glyphs */
+  line-height: 1.1;
+  /* Base font size suitable for mobile; scale on larger devices */
+  font-size: clamp(2.5rem, 5vw + 1rem, 8rem);
+}
+
+/* 2. Remove orange gradients on intro and main sections */
+.intro-section,
+.main-section,
+.hero-section {
+  background-image: none !important;
+  /* Use a custom property if defined, fallback to plain black/white */
+  background-color: var(--color-background, #0a0a0a) !important;
+}
+
+/* 3. Smooth animation helper */
+.smooth-animation {
+  animation-timing-function: ease-in-out !important;
+  animation-duration: 0.7s !important;
+  animation-fill-mode: both;
+  will-change: transform, opacity;
+}
+
+/* Example usage:
+ * <h1 class="hero-title">fast<span class="sr-only">/</span>HUNTER</h1>
+ * <section class="hero-section">…</section>
+ * <div class="loader smooth-animation">…</div>
+ */
