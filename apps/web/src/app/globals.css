@@ -42,7 +42,7 @@ button { cursor: pointer; }
 .home-hero .brand-mark .brand-slash { color: #eb5620; font-size: 220px; line-height: 0.6em; letter-spacing: -0.063em; }
 .home-hero .brand-mark .brand-hunter { letter-spacing: -0.005em; }
 .home-hero .product-preview .brand-hunter { letter-spacing: 0.034em; }
-.home-hero .product-preview .brand-slash { font-size: 92px; }
+.home-hero .product-preview .brand-slash { font-size: 79px; }
 
 /* compact header brand */
 .brand-mark-compact { font-size: 25px; }
